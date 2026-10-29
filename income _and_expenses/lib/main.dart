@@ -10,7 +10,7 @@ void main() async {
 }
 
 class IncomeExpensesApp extends StatelessWidget {
-  const IncomeExpensesApp({Key? key}) : super(key: key);
+  const IncomeExpensesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class IncomeExpensesApp extends StatelessWidget {
 }
 
 class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+  const DashboardScreen({super.key});
 
   @override
   State<DashboardScreen> createState() => _DashboardScreenState();
@@ -101,7 +101,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               TextField(controller: balanceController, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Initial Balance')),
               TextField(controller: phoneController, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'WhatsApp Phone (optional)')),
               DropdownButtonFormField<String>(
-                value: selectedType,
+                initialValue: selectedType,
                 items: ['Bank', 'Cash', 'Payable', 'Receivable']
                     .map((type) => DropdownMenuItem(value: type, child: Text(type)))
                     .toList(),
@@ -226,7 +226,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           gradientColors: const [Color(0xFFcb2d3e), Color(0xFFef473a)],
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      const SizedBox(width:_12), // Note: Make sure it's 12 without underscore
                       Expanded(
                         child: NeonCard(
                           title: 'Receivable',
