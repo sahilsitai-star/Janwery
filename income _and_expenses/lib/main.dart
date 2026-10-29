@@ -164,7 +164,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Net Worth Card with Neon Gradient & Outline
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.all(20),
@@ -195,8 +194,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  // Bank & Cash Cards
                   Row(
                     children: [
                       Expanded(
@@ -219,8 +216,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
                   const SizedBox(height: 12),
-
-                  // Payable & Receivable Cards
                   Row(
                     children: [
                       Expanded(
@@ -243,8 +238,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     ],
                   ),
                   const SizedBox(height: 25),
-
-                  // Chart / Analytics placeholder section
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
