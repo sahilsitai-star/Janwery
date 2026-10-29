@@ -101,7 +101,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               TextField(controller: balanceController, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Initial Balance')),
               TextField(controller: phoneController, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'WhatsApp Phone (optional)')),
               DropdownButtonFormField<String>(
-                initialValue: selectedType,
+                value: selectedType,
                 items: ['Bank', 'Cash', 'Payable', 'Receivable']
                     .map((type) => DropdownMenuItem(value: type, child: Text(type)))
                     .toList(),
